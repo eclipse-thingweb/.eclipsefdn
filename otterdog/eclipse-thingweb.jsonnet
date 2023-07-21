@@ -68,6 +68,10 @@ orgs.newOrg('eclipse-thingweb') {
         },
       ],
     },
+    orgs.newRepo('test-things') {
+      allow_update_branch: false,
+      web_commit_signoff_required: false,
+    },
     orgs.newRepo('website') {
       allow_update_branch: false,
       default_branch: "master",
