@@ -75,9 +75,9 @@ orgs.newOrg('eclipse-thingweb') {
       topics+: [
         "internet-of-things",
         "iot",
-        "web-of-things",
         "protocols",
         "testing",
+        "web-of-things",
       ],
       web_commit_signoff_required: false,
     },
