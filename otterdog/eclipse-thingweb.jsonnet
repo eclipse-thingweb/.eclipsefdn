@@ -68,6 +68,19 @@ orgs.newOrg('eclipse-thingweb') {
         },
       ],
     },
+    orgs.newRepo('test-things') {
+      allow_update_branch: false,
+      description: "Collection of Things that can be used for testing different IoT protocols, security mechanisms and interaction styles",
+      homepage: "http://thingweb.io",
+      topics+: [
+        "internet-of-things",
+        "iot",
+        "protocols",
+        "testing",
+        "web-of-things"
+      ],
+      web_commit_signoff_required: false,
+    },
     orgs.newRepo('website') {
       allow_update_branch: false,
       default_branch: "master",
