@@ -22,7 +22,7 @@ orgs.newOrg('eclipse-thingweb') {
       allow_update_branch: false,
       default_branch: "master",
       dependabot_security_updates_enabled: true,
-      description: "thingweb.node-wot",
+      description: "Components for building WoT devices or for interacting with them over various IoT protocols",
       web_commit_signoff_required: false,
       webhooks: [
         orgs.newRepoWebhook('https://notify.travis-ci.org') {
