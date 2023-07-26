@@ -8,7 +8,6 @@ orgs.newOrg('eclipse-thingweb') {
     description: "",
     members_can_change_project_visibility: false,
     members_can_change_repo_visibility: true,
-    members_can_create_teams: true,
     members_can_delete_repositories: true,
     name: "Eclipse Thingweb\u2122",
     packages_containers_internal: false,
