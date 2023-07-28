@@ -85,6 +85,9 @@ orgs.newOrg('eclipse-thingweb') {
       default_branch: "master",
       dependabot_security_updates_enabled: true,
       description: "The website for the thingweb project",
+      gh_pages_build_type: "legacy",
+      gh_pages_source_branch: "gh-pages",
+      gh_pages_source_path: "/",
       web_commit_signoff_required: false,
       webhooks: [
         orgs.newRepoWebhook('https://notify.travis-ci.org') {
