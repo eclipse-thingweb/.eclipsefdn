@@ -21,7 +21,6 @@ orgs.newOrg('eclipse-thingweb') {
   },
   _repositories+:: [
     orgs.newRepo('.github') {
-      dependabot_security_updates_enabled: false,
       description: "Project-level settings, resources and discussions",
       has_discussions: true,
       homepage: "https://thingweb.io",
