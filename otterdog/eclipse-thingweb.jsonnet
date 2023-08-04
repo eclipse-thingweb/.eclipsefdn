@@ -17,6 +17,20 @@ orgs.newOrg('eclipse-thingweb') {
     web_commit_signoff_required: false,
   },
   _repositories+:: [
+    orgs.newRepo('.github') {
+      allow_update_branch: false,
+      default_branch: "main",
+      dependabot_security_updates_enabled: true,
+      description: "Project-level settings, resources and discussions",
+      has_discussions: true,
+      homepage: "https://thingweb.io",
+      topics+: [
+        "iot",
+        "web",
+        "organization"
+      ],
+      web_commit_signoff_required: false,
+    },
     orgs.newRepo('node-wot') {
       allow_update_branch: false,
       default_branch: "master",
