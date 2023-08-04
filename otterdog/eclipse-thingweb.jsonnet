@@ -16,7 +16,7 @@ orgs.newOrg('eclipse-thingweb') {
     two_factor_requirement: false,
     web_commit_signoff_required: false,
     has_discussions: true,
-    discussion_source_repository: ".github"
+    discussion_source_repository: ".github",
     email: "thingweb-dev@eclipse.org",
   },
   _repositories+:: [
