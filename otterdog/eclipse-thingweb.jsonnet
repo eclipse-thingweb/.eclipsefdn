@@ -6,18 +6,18 @@ orgs.newOrg('eclipse-thingweb') {
     default_workflow_permissions: "write",
     dependabot_security_updates_enabled_for_new_repositories: false,
     description: "Components for making IoT solutions interoperable at scale by leveraging the W3C WoT standards",
+    discussion_source_repository: "eclipse-thingweb/.github",
+    email: "thingweb-dev@eclipse.org",
+    has_discussions: true,
     members_can_change_project_visibility: false,
     members_can_change_repo_visibility: true,
     members_can_delete_repositories: true,
-    name: "Eclipse Thingweb\u2122",
+    name: "Eclipse Thingweb™",
     packages_containers_internal: false,
     packages_containers_public: false,
     readers_can_create_discussions: true,
     two_factor_requirement: false,
     web_commit_signoff_required: false,
-    has_discussions: true,
-    discussion_source_repository: "eclipse-thingweb/.github",
-    email: "thingweb-dev@eclipse.org",
   },
   _repositories+:: [
     orgs.newRepo('.github') {
@@ -26,8 +26,8 @@ orgs.newOrg('eclipse-thingweb') {
       homepage: "https://thingweb.io",
       topics+: [
         "iot",
-        "web",
-        "organization"
+        "organization",
+        "web"
       ],
       web_commit_signoff_required: false,
     },
