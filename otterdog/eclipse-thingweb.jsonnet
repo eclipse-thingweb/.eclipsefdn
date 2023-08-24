@@ -60,8 +60,6 @@ orgs.newOrg('eclipse-thingweb') {
       description: "Browser or Node.js based tool for validating and playing with W3C Thing Descriptions",
       has_discussions: true,
       homepage: "http://plugfest.thingweb.io/playground/",
-      secret_scanning: "disabled",
-      secret_scanning_push_protection: "disabled",
       topics+: [
         "iot",
         "web"
