@@ -10,8 +10,6 @@ orgs.newOrg('eclipse-thingweb') {
     email: "thingweb-dev@eclipse.org",
     has_discussions: true,
     members_can_change_project_visibility: false,
-    members_can_change_repo_visibility: true,
-    members_can_delete_repositories: true,
     name: "Eclipse Thingweb™",
     packages_containers_internal: false,
     packages_containers_public: false,
