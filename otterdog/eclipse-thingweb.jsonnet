@@ -3,7 +3,6 @@ local orgs = import 'vendor/otterdog-defaults/otterdog-defaults.libsonnet';
 orgs.newOrg('eclipse-thingweb') {
   settings+: {
     default_repository_permission: "none",
-    default_workflow_permissions: "write",
     dependabot_security_updates_enabled_for_new_repositories: false,
     description: "Components for making IoT solutions interoperable at scale by leveraging the W3C WoT standards",
     discussion_source_repository: "eclipse-thingweb/.github",
@@ -16,6 +15,10 @@ orgs.newOrg('eclipse-thingweb') {
     readers_can_create_discussions: true,
     two_factor_requirement: false,
     web_commit_signoff_required: false,
+    workflows+: {
+      actions_can_approve_pull_request_reviews: false,
+      default_workflow_permissions: "write",
+    },
   },
   _repositories+:: [
     orgs.newRepo('.github') {
