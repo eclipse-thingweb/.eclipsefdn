@@ -22,6 +22,8 @@ orgs.newOrg('eclipse-thingweb') {
   },
   _repositories+:: [
     orgs.newRepo('.github') {
+      allow_merge_commit: true,
+      delete_branch_on_merge: false,
       description: "Project-level settings, resources and discussions",
       has_discussions: true,
       homepage: "https://thingweb.io",
@@ -33,8 +35,10 @@ orgs.newOrg('eclipse-thingweb') {
       web_commit_signoff_required: false,
     },
     orgs.newRepo('node-wot') {
+      allow_merge_commit: true,
       allow_update_branch: false,
       default_branch: "master",
+      delete_branch_on_merge: false,
       dependabot_security_updates_enabled: true,
       description: "Components for building WoT devices or for interacting with them over various IoT protocols",
       web_commit_signoff_required: false,
@@ -54,8 +58,10 @@ orgs.newOrg('eclipse-thingweb') {
       ],
     },
     orgs.newRepo('playground') {
+      allow_merge_commit: true,
       allow_update_branch: false,
       default_branch: "master",
+      delete_branch_on_merge: false,
       dependabot_security_updates_enabled: true,
       description: "Browser or Node.js based tool for validating and playing with W3C Thing Descriptions",
       has_discussions: true,
@@ -81,7 +87,9 @@ orgs.newOrg('eclipse-thingweb') {
       ],
     },
     orgs.newRepo('test-things') {
+      allow_merge_commit: true,
       allow_update_branch: false,
+      delete_branch_on_merge: false,
       description: "Collection of Things that can be used for testing different IoT protocols, security mechanisms and interaction styles",
       homepage: "http://thingweb.io",
       topics+: [
@@ -94,8 +102,10 @@ orgs.newOrg('eclipse-thingweb') {
       web_commit_signoff_required: false,
     },
     orgs.newRepo('website') {
+      allow_merge_commit: true,
       allow_update_branch: false,
       default_branch: "master",
+      delete_branch_on_merge: false,
       dependabot_security_updates_enabled: true,
       description: "The website for the thingweb project",
       gh_pages_build_type: "legacy",
