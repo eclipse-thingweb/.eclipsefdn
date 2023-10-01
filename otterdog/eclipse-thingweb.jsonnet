@@ -34,6 +34,19 @@ orgs.newOrg('eclipse-thingweb') {
       ],
       web_commit_signoff_required: false,
     },
+    orgs.newRepo('thingweb') {
+      allow_merge_commit: true,
+      delete_branch_on_merge: false,
+      description: "Project-level discussions and organizational resources",
+      has_discussions: true,
+      homepage: "https://thingweb.io",
+      topics+: [
+        "iot",
+        "organization",
+        "web"
+      ],
+      web_commit_signoff_required: false,
+    },
     orgs.newRepo('node-wot') {
       allow_merge_commit: true,
       allow_update_branch: false,
