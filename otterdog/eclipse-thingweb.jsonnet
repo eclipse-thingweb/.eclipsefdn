@@ -5,7 +5,7 @@ orgs.newOrg('eclipse-thingweb') {
     default_repository_permission: "none",
     dependabot_security_updates_enabled_for_new_repositories: false,
     description: "Components for making IoT solutions interoperable at scale by leveraging the W3C WoT standards",
-    discussion_source_repository: "eclipse-thingweb/.github",
+    discussion_source_repository: "eclipse-thingweb/thingweb",
     email: "thingweb-dev@eclipse.org",
     has_discussions: true,
     members_can_change_project_visibility: false,
@@ -25,7 +25,6 @@ orgs.newOrg('eclipse-thingweb') {
       allow_merge_commit: true,
       delete_branch_on_merge: false,
       description: "Project-level settings, resources and discussions",
-      has_discussions: true,
       homepage: "https://thingweb.io",
       topics+: [
         "iot",
@@ -55,6 +54,8 @@ orgs.newOrg('eclipse-thingweb') {
       dependabot_security_updates_enabled: true,
       description: "Components for building WoT devices or for interacting with them over various IoT protocols",
       web_commit_signoff_required: false,
+      has_wiki: false,
+      homepage: "https://thingweb.io",
       webhooks: [
         orgs.newRepoWebhook('https://notify.travis-ci.org') {
           events+: [
@@ -78,6 +79,7 @@ orgs.newOrg('eclipse-thingweb') {
       dependabot_security_updates_enabled: true,
       description: "Browser or Node.js based tool for validating and playing with W3C Thing Descriptions",
       has_discussions: true,
+      has_wiki: false,
       homepage: "http://plugfest.thingweb.io/playground/",
       topics+: [
         "iot",
@@ -104,7 +106,8 @@ orgs.newOrg('eclipse-thingweb') {
       allow_update_branch: false,
       delete_branch_on_merge: false,
       description: "Collection of Things that can be used for testing different IoT protocols, security mechanisms and interaction styles",
-      homepage: "http://thingweb.io",
+      homepage: "https://thingweb.io",
+      has_wiki: false,
       topics+: [
         "internet-of-things",
         "iot",
@@ -125,6 +128,8 @@ orgs.newOrg('eclipse-thingweb') {
       gh_pages_source_branch: "gh-pages",
       gh_pages_source_path: "/",
       web_commit_signoff_required: false,
+      homepage: "https://thingweb.io",
+      has_wiki: false,
       webhooks: [
         orgs.newRepoWebhook('https://notify.travis-ci.org') {
           events+: [
