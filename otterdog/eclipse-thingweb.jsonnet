@@ -25,7 +25,6 @@ orgs.newOrg('eclipse-thingweb') {
       allow_merge_commit: true,
       delete_branch_on_merge: false,
       description: "Project-level settings, resources and discussions",
-      has_discussions: false,
       homepage: "https://thingweb.io",
       topics+: [
         "iot",
