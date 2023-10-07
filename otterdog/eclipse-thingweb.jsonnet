@@ -117,6 +117,22 @@ orgs.newOrg('eclipse-thingweb') {
       ],
       web_commit_signoff_required: false,
     },
+    orgs.newRepo('td-tools') {
+      allow_merge_commit: true,
+      allow_update_branch: false,
+      delete_branch_on_merge: false,
+      description: "Tooling for Thing Descriptions and Thing Models",
+      homepage: "https://thingweb.io",
+      has_wiki: false,
+      topics+: [
+        "internet-of-things",
+        "iot",
+        "protocols",
+        "testing",
+        "web-of-things"
+      ],
+      web_commit_signoff_required: false,
+    },
     orgs.newRepo('website') {
       allow_merge_commit: true,
       allow_update_branch: false,
