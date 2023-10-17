@@ -1,6 +1,6 @@
 site_name: Otterdog configuration @ eclipse-thingweb
 site_description: Otterdog configuration @ eclipse-thingweb
-strict: true
+strict: false
 
 site_url: https://eclipse-thingweb.github.io/.eclipsefdn/
 
