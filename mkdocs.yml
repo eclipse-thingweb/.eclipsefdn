@@ -4,6 +4,9 @@ strict: false
 
 site_url: https://eclipse-thingweb.github.io/.eclipsefdn/
 
+repo_name: eclipse-thingweb/.eclipsefdn
+repo_url: https://github.com/eclipse-thingweb/.eclipsefdn/
+
 docs_dir: ./docs
 site_dir: ./_site
 
