@@ -29,7 +29,8 @@ orgs.newOrg('eclipse-thingweb') {
       topics+: [
         "iot",
         "organization",
-        "web"
+        "web",
+        "web-of-things"
       ],
       web_commit_signoff_required: false,
     },
@@ -42,7 +43,8 @@ orgs.newOrg('eclipse-thingweb') {
       topics+: [
         "iot",
         "organization",
-        "web"
+        "web",
+        "web-of-things"
       ],
       web_commit_signoff_required: false,
     },
@@ -56,6 +58,12 @@ orgs.newOrg('eclipse-thingweb') {
       web_commit_signoff_required: false,
       has_wiki: false,
       homepage: "https://thingweb.io",
+      topics+: [
+        "iot",
+        "web",
+        "web-of-things",
+        "nodejs"
+      ],
       webhooks: [
         orgs.newRepoWebhook('https://notify.travis-ci.org') {
           events+: [
@@ -83,7 +91,9 @@ orgs.newOrg('eclipse-thingweb') {
       homepage: "http://plugfest.thingweb.io/playground/",
       topics+: [
         "iot",
-        "web"
+        "web",
+        "web-of-things",
+        "nodejs"
       ],
       web_commit_signoff_required: false,
       secrets: [
@@ -109,7 +119,6 @@ orgs.newOrg('eclipse-thingweb') {
       homepage: "https://thingweb.io",
       has_wiki: false,
       topics+: [
-        "internet-of-things",
         "iot",
         "protocols",
         "testing",
@@ -125,8 +134,8 @@ orgs.newOrg('eclipse-thingweb') {
       homepage: "https://thingweb.io",
       has_wiki: false,
       topics+: [
-        "internet-of-things",
         "iot",
+        "web",
         "protocols",
         "testing",
         "web-of-things"
@@ -145,6 +154,11 @@ orgs.newOrg('eclipse-thingweb') {
       gh_pages_source_path: "/",
       web_commit_signoff_required: false,
       homepage: "https://thingweb.io",
+      topics+: [
+        "iot",
+        "web",
+        "web-of-things"
+      ],
       has_wiki: false,
       webhooks: [
         orgs.newRepoWebhook('https://notify.travis-ci.org') {
