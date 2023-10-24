@@ -2,7 +2,6 @@ local orgs = import 'vendor/otterdog-defaults/otterdog-defaults.libsonnet';
 
 orgs.newOrg('eclipse-thingweb') {
   settings+: {
-    default_repository_permission: "none",
     dependabot_security_updates_enabled_for_new_repositories: false,
     description: "Components for making IoT solutions interoperable at scale by leveraging the W3C WoT standards",
     discussion_source_repository: "eclipse-thingweb/thingweb",
@@ -16,7 +15,6 @@ orgs.newOrg('eclipse-thingweb') {
     two_factor_requirement: false,
     web_commit_signoff_required: false,
     workflows+: {
-      actions_can_approve_pull_request_reviews: true,
       default_workflow_permissions: "write",
     },
   },
@@ -33,20 +31,9 @@ orgs.newOrg('eclipse-thingweb') {
         "web-of-things"
       ],
       web_commit_signoff_required: false,
-    },
-    orgs.newRepo('thingweb') {
-      allow_merge_commit: true,
-      delete_branch_on_merge: false,
-      description: "Project-level discussions and organizational resources",
-      has_discussions: true,
-      homepage: "https://thingweb.io",
-      topics+: [
-        "iot",
-        "organization",
-        "web",
-        "web-of-things"
-      ],
-      web_commit_signoff_required: false,
+      workflows+: {
+        default_workflow_permissions: "write",
+      },
     },
     orgs.newRepo('node-wot') {
       allow_merge_commit: true,
@@ -55,15 +42,18 @@ orgs.newOrg('eclipse-thingweb') {
       delete_branch_on_merge: false,
       dependabot_security_updates_enabled: true,
       description: "Components for building WoT devices or for interacting with them over various IoT protocols",
-      web_commit_signoff_required: false,
       has_wiki: false,
       homepage: "https://thingweb.io",
       topics+: [
         "iot",
+        "nodejs",
         "web",
-        "web-of-things",
-        "nodejs"
+        "web-of-things"
       ],
+      web_commit_signoff_required: false,
+      workflows+: {
+        default_workflow_permissions: "write",
+      },
       webhooks: [
         orgs.newRepoWebhook('https://notify.travis-ci.org') {
           events+: [
@@ -91,11 +81,14 @@ orgs.newOrg('eclipse-thingweb') {
       homepage: "http://plugfest.thingweb.io/playground/",
       topics+: [
         "iot",
+        "nodejs",
         "web",
-        "web-of-things",
-        "nodejs"
+        "web-of-things"
       ],
       web_commit_signoff_required: false,
+      workflows+: {
+        default_workflow_permissions: "write",
+      },
       secrets: [
         orgs.newRepoSecret('SSH_HOST') {
           value: "********",
@@ -111,36 +104,59 @@ orgs.newOrg('eclipse-thingweb') {
         },
       ],
     },
-    orgs.newRepo('test-things') {
-      allow_merge_commit: true,
-      allow_update_branch: false,
-      delete_branch_on_merge: false,
-      description: "Collection of Things that can be used for testing different IoT protocols, security mechanisms and interaction styles",
-      homepage: "https://thingweb.io",
-      has_wiki: false,
-      topics+: [
-        "iot",
-        "protocols",
-        "testing",
-        "web-of-things"
-      ],
-      web_commit_signoff_required: false,
-    },
     orgs.newRepo('td-tools') {
       allow_merge_commit: true,
       allow_update_branch: false,
       delete_branch_on_merge: false,
       description: "Tooling for Thing Descriptions and Thing Models",
-      homepage: "https://thingweb.io",
       has_wiki: false,
+      homepage: "https://thingweb.io",
       topics+: [
         "iot",
+        "protocols",
+        "testing",
         "web",
+        "web-of-things"
+      ],
+      web_commit_signoff_required: false,
+      workflows+: {
+        default_workflow_permissions: "write",
+      },
+    },
+    orgs.newRepo('test-things') {
+      allow_merge_commit: true,
+      allow_update_branch: false,
+      delete_branch_on_merge: false,
+      description: "Collection of Things that can be used for testing different IoT protocols, security mechanisms and interaction styles",
+      has_wiki: false,
+      homepage: "https://thingweb.io",
+      topics+: [
+        "iot",
         "protocols",
         "testing",
         "web-of-things"
       ],
       web_commit_signoff_required: false,
+      workflows+: {
+        default_workflow_permissions: "write",
+      },
+    },
+    orgs.newRepo('thingweb') {
+      allow_merge_commit: true,
+      delete_branch_on_merge: false,
+      description: "Project-level discussions and organizational resources",
+      has_discussions: true,
+      homepage: "https://thingweb.io",
+      topics+: [
+        "iot",
+        "organization",
+        "web",
+        "web-of-things"
+      ],
+      web_commit_signoff_required: false,
+      workflows+: {
+        default_workflow_permissions: "write",
+      },
     },
     orgs.newRepo('website') {
       allow_merge_commit: true,
@@ -152,14 +168,17 @@ orgs.newOrg('eclipse-thingweb') {
       gh_pages_build_type: "legacy",
       gh_pages_source_branch: "gh-pages",
       gh_pages_source_path: "/",
-      web_commit_signoff_required: false,
+      has_wiki: false,
       homepage: "https://thingweb.io",
       topics+: [
         "iot",
         "web",
         "web-of-things"
       ],
-      has_wiki: false,
+      web_commit_signoff_required: false,
+      workflows+: {
+        default_workflow_permissions: "write",
+      },
       webhooks: [
         orgs.newRepoWebhook('https://notify.travis-ci.org') {
           events+: [
