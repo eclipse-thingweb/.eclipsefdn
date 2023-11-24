@@ -35,6 +35,45 @@ orgs.newOrg('eclipse-thingweb') {
         default_workflow_permissions: "write",
       },
     },
+    orgs.newRepo('dart_wot') {
+      allow_auto_merge: true,
+      allow_merge_commit: true,
+      allow_update_branch: false,
+      description: "A W3C Web of Things implementation written in Dart.",
+      homepage: "",
+      secret_scanning: "disabled",
+      secret_scanning_push_protection: "disabled",
+      topics+: [
+        "coap",
+        "dart",
+        "flutter",
+        "internetofthings",
+        "iot",
+        "webofthings",
+        "wot"
+      ],
+      web_commit_signoff_required: false,
+      workflows+: {
+        default_workflow_permissions: "write",
+      },
+      secrets: [
+        orgs.newRepoSecret('CODECOV_TOKEN') {
+          value: "********",
+        },
+      ],
+      branch_protection_rules: [
+        orgs.newBranchProtectionRule('main') {
+          required_approving_review_count: null,
+          required_status_checks+: [
+            "build (macos-latest)",
+            "build (ubuntu-latest)",
+            "build (windows-latest)"
+          ],
+          requires_pull_request: false,
+          requires_strict_status_checks: true,
+        },
+      ],
+    },
     orgs.newRepo('node-wot') {
       allow_merge_commit: true,
       allow_update_branch: false,
