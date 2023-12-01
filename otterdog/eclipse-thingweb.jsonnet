@@ -50,7 +50,6 @@ orgs.newOrg('eclipse-thingweb') {
         "flutter",
         "internetofthings",
         "iot",
-        "webofthings",
         "web-of-things",
         "wot"
       ],
