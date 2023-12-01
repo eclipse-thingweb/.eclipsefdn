@@ -28,7 +28,8 @@ orgs.newOrg('eclipse-thingweb') {
         "iot",
         "organization",
         "web",
-        "web-of-things"
+        "web-of-things",
+        "wot"
       ],
       web_commit_signoff_required: false,
       workflows+: {
@@ -49,7 +50,7 @@ orgs.newOrg('eclipse-thingweb') {
         "flutter",
         "internetofthings",
         "iot",
-        "webofthings",
+        "web-of-things",
         "wot"
       ],
       web_commit_signoff_required: false,
@@ -87,7 +88,8 @@ orgs.newOrg('eclipse-thingweb') {
         "iot",
         "nodejs",
         "web",
-        "web-of-things"
+        "web-of-things",
+        "wot"
       ],
       web_commit_signoff_required: false,
       workflows+: {
@@ -122,7 +124,8 @@ orgs.newOrg('eclipse-thingweb') {
         "iot",
         "nodejs",
         "web",
-        "web-of-things"
+        "web-of-things",
+        "wot"
       ],
       web_commit_signoff_required: false,
       workflows+: {
@@ -173,7 +176,8 @@ orgs.newOrg('eclipse-thingweb') {
         "iot",
         "protocols",
         "testing",
-        "web-of-things"
+        "web-of-things",
+        "wot"
       ],
       web_commit_signoff_required: false,
       workflows+: {
@@ -190,7 +194,8 @@ orgs.newOrg('eclipse-thingweb') {
         "iot",
         "organization",
         "web",
-        "web-of-things"
+        "web-of-things",
+        "wot"
       ],
       web_commit_signoff_required: false,
       workflows+: {
@@ -212,7 +217,8 @@ orgs.newOrg('eclipse-thingweb') {
       topics+: [
         "iot",
         "web",
-        "web-of-things"
+        "web-of-things",
+        "wot"
       ],
       web_commit_signoff_required: false,
       workflows+: {
