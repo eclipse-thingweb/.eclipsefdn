@@ -7,7 +7,6 @@ orgs.newOrg('eclipse-thingweb') {
     discussion_source_repository: "eclipse-thingweb/thingweb",
     email: "thingweb-dev@eclipse.org",
     has_discussions: true,
-    members_can_change_project_visibility: false,
     name: "Eclipse Thingweb™",
     packages_containers_internal: false,
     packages_containers_public: false,
