@@ -91,7 +91,7 @@ orgs.newOrg('eclipse-thingweb') {
         "wot"
       ],
       branch_protection_rules : [
-        orgs.newBranchProtectionRule('main') {
+        orgs.newBranchProtectionRule('master') {
           required_approving_review_count: 2
         }
       ],
