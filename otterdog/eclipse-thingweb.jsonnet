@@ -90,6 +90,11 @@ orgs.newOrg('eclipse-thingweb') {
         "web-of-things",
         "wot"
       ],
+      branch_protection_rules : [
+        orgs.newBranchProtectionRule('main') {
+          required_approving_review_count: 2
+        }
+      ],
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
