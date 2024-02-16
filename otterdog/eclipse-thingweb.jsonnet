@@ -133,20 +133,6 @@ orgs.newOrg('eclipse-thingweb') {
       workflows+: {
         default_workflow_permissions: "write",
       },
-      secrets: [
-        orgs.newRepoSecret('SSH_HOST') {
-          value: "********",
-        },
-        orgs.newRepoSecret('SSH_PASS') {
-          value: "********",
-        },
-        orgs.newRepoSecret('TD_PLAYGROUND_LOGIN') {
-          value: "********",
-        },
-        orgs.newRepoSecret('TD_PLAYGROUND_TOKEN') {
-          value: "********",
-        },
-      ],
     },
     orgs.newRepo('td-tools') {
       allow_merge_commit: true,
@@ -178,6 +164,25 @@ orgs.newOrg('eclipse-thingweb') {
         "iot",
         "protocols",
         "testing",
+        "web-of-things",
+        "wot"
+      ],
+      web_commit_signoff_required: false,
+      workflows+: {
+        default_workflow_permissions: "write",
+      },
+    },
+    orgs.newRepo('node-red') {
+      allow_merge_commit: true,
+      allow_update_branch: false,
+      delete_branch_on_merge: false,
+      description: "Collection of Node-RED packages of Eclipse Thingweb",
+      has_wiki: false,
+      homepage: "https://thingweb.io",
+      topics+: [
+        "iot",
+        "protocols",
+        "node-red",
         "web-of-things",
         "wot"
       ],
