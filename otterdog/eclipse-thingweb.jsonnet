@@ -90,7 +90,11 @@ orgs.newOrg('eclipse-thingweb') {
       ],
       branch_protection_rules : [
         orgs.newBranchProtectionRule('master') {
-          required_approving_review_count: 2
+          required_approving_review_count: 1,
+          bypass_actors+: [
+            "@relu91",
+            "@danielpeintner"
+          ],
         }
       ],
       web_commit_signoff_required: false,
