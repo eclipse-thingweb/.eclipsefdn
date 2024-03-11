@@ -72,6 +72,25 @@ orgs.newOrg('eclipse-thingweb') {
         },
       ],
     },
+    orgs.newRepo('node-red') {
+      allow_merge_commit: true,
+      allow_update_branch: false,
+      delete_branch_on_merge: false,
+      description: "Collection of Node-RED packages of Eclipse Thingweb",
+      has_wiki: false,
+      homepage: "https://thingweb.io",
+      topics+: [
+        "iot",
+        "node-red",
+        "protocols",
+        "web-of-things",
+        "wot"
+      ],
+      web_commit_signoff_required: false,
+      workflows+: {
+        default_workflow_permissions: "write",
+      },
+    },
     orgs.newRepo('node-wot') {
       allow_merge_commit: true,
       allow_update_branch: false,
@@ -87,15 +106,6 @@ orgs.newOrg('eclipse-thingweb') {
         "web",
         "web-of-things",
         "wot"
-      ],
-      branch_protection_rules : [
-        orgs.newBranchProtectionRule('master') {
-          required_approving_review_count: 1,
-          bypass_pull_request_allowances+: [
-            "@relu91",
-            "@danielpeintner"
-          ],
-        }
       ],
       web_commit_signoff_required: false,
       workflows+: {
@@ -113,6 +123,15 @@ orgs.newOrg('eclipse-thingweb') {
             "push",
             "repository"
           ],
+        },
+      ],
+      branch_protection_rules: [
+        orgs.newBranchProtectionRule('master') {
+          bypass_pull_request_allowances+: [
+            "@danielpeintner",
+            "@relu91"
+          ],
+          required_approving_review_count: 1,
         },
       ],
     },
@@ -168,25 +187,6 @@ orgs.newOrg('eclipse-thingweb') {
         "iot",
         "protocols",
         "testing",
-        "web-of-things",
-        "wot"
-      ],
-      web_commit_signoff_required: false,
-      workflows+: {
-        default_workflow_permissions: "write",
-      },
-    },
-    orgs.newRepo('node-red') {
-      allow_merge_commit: true,
-      allow_update_branch: false,
-      delete_branch_on_merge: false,
-      description: "Collection of Node-RED packages of Eclipse Thingweb",
-      has_wiki: false,
-      homepage: "https://thingweb.io",
-      topics+: [
-        "iot",
-        "protocols",
-        "node-red",
         "web-of-things",
         "wot"
       ],
