@@ -72,6 +72,18 @@ orgs.newOrg('eclipse-thingweb') {
         },
       ],
     },
+    orgs.newRepo('domus-tdd-api') {
+      allow_merge_commit: true,
+      allow_update_branch: false,
+      delete_branch_on_merge: false,
+      has_wiki: false,
+      secret_scanning: "disabled",
+      secret_scanning_push_protection: "disabled",
+      web_commit_signoff_required: false,
+      workflows+: {
+        actions_can_approve_pull_request_reviews: false,
+      },
+    },
     orgs.newRepo('node-red') {
       allow_merge_commit: true,
       allow_update_branch: false,
