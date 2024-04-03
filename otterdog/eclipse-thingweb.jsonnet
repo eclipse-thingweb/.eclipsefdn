@@ -9,7 +9,6 @@ orgs.newOrg('eclipse-thingweb') {
     has_discussions: true,
     name: "Eclipse Thingweb™",
     readers_can_create_discussions: true,
-    two_factor_requirement: false,
     web_commit_signoff_required: false,
     workflows+: {
       default_workflow_permissions: "write",
