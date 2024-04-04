@@ -8,7 +8,6 @@ orgs.newOrg('eclipse-thingweb') {
     email: "thingweb-dev@eclipse.org",
     has_discussions: true,
     name: "Eclipse Thingweb™",
-    readers_can_create_discussions: true,
     web_commit_signoff_required: false,
     workflows+: {
       default_workflow_permissions: "write",
