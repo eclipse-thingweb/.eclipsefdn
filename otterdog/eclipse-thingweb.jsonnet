@@ -54,7 +54,7 @@ orgs.newOrg('eclipse-thingweb') {
       },
       secrets: [
         orgs.newRepoSecret('CODECOV_TOKEN') {
-          value: "********",
+          value: "pass:bots/iot.thingweb/codecov.io/codecov-token",
         },
       ],
       branch_protection_rules: [
