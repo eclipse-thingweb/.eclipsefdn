@@ -62,7 +62,7 @@ orgs.newOrg('eclipse-thingweb') {
           bypass_pull_request_allowances+: [
             "@JKRhb",
           ],
-          required_approving_review_count: null,
+          required_approving_review_count: 1,
           required_status_checks+: [
             "build (macos-latest)",
             "build (ubuntu-latest)",
