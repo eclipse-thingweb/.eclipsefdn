@@ -68,7 +68,7 @@ orgs.newOrg('eclipse-thingweb') {
             "build (ubuntu-latest)",
             "build (windows-latest)"
           ],
-          requires_pull_request: false,
+          requires_pull_request: true,
           requires_strict_status_checks: true,
         },
       ],
