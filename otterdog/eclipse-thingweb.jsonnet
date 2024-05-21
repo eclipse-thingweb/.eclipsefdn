@@ -53,6 +53,9 @@ orgs.newOrg('eclipse-thingweb') {
         default_workflow_permissions: "write",
       },
       secrets: [
+        orgs.newRepoSecret('BOT_TOKEN') {
+          value: "pass:bots/iot.thingweb/github.com/project-token",
+        },
         orgs.newRepoSecret('CODECOV_TOKEN') {
           value: "pass:bots/iot.thingweb/codecov.io/codecov-token",
         },
