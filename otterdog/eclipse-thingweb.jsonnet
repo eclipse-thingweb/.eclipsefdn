@@ -59,6 +59,9 @@ orgs.newOrg('eclipse-thingweb') {
       ],
       branch_protection_rules: [
         orgs.newBranchProtectionRule('main') {
+          bypass_pull_request_allowances+: [
+            "@JKRhb",
+          ],
           required_approving_review_count: null,
           required_status_checks+: [
             "build (macos-latest)",
