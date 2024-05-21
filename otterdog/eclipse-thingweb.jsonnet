@@ -53,19 +53,25 @@ orgs.newOrg('eclipse-thingweb') {
         default_workflow_permissions: "write",
       },
       secrets: [
+        orgs.newRepoSecret('BOT_TOKEN') {
+          value: "pass:bots/iot.thingweb/github.com/project-token",
+        },
         orgs.newRepoSecret('CODECOV_TOKEN') {
           value: "pass:bots/iot.thingweb/codecov.io/codecov-token",
         },
       ],
       branch_protection_rules: [
         orgs.newBranchProtectionRule('main') {
-          required_approving_review_count: null,
+          bypass_pull_request_allowances+: [
+            "@JKRhb",
+          ],
+          required_approving_review_count: 1,
           required_status_checks+: [
             "build (macos-latest)",
             "build (ubuntu-latest)",
             "build (windows-latest)"
           ],
-          requires_pull_request: false,
+          requires_pull_request: true,
           requires_strict_status_checks: true,
         },
       ],
