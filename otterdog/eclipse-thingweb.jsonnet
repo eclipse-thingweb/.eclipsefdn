@@ -80,6 +80,11 @@ orgs.newOrg('eclipse-thingweb') {
       workflows+: {
         actions_can_approve_pull_request_reviews: false,
       },
+      secrets: [
+        orgs.newRepoSecret('CODECOV_TOKEN') {
+          value: "pass:bots/iot.thingweb/codecov.io/domus-tdd-api-token",
+        },
+      ],
     },
     orgs.newRepo('node-red') {
       allow_merge_commit: true,
@@ -99,6 +104,11 @@ orgs.newOrg('eclipse-thingweb') {
       workflows+: {
         default_workflow_permissions: "write",
       },
+      secrets: [
+        orgs.newRepoSecret('CODECOV_TOKEN') {
+          value: "pass:bots/iot.thingweb/codecov.io/node-red-token",
+        },
+      ],
     },
     orgs.newRepo('node-wot') {
       allow_merge_commit: true,
@@ -165,6 +175,11 @@ orgs.newOrg('eclipse-thingweb') {
       workflows+: {
         default_workflow_permissions: "write",
       },
+      secrets: [
+        orgs.newRepoSecret('CODECOV_TOKEN') {
+          value: "pass:bots/iot.thingweb/codecov.io/playground-token",
+        },
+      ],
     },
     orgs.newRepo('td-tools') {
       allow_merge_commit: true,
@@ -184,6 +199,11 @@ orgs.newOrg('eclipse-thingweb') {
       workflows+: {
         default_workflow_permissions: "write",
       },
+      secrets: [
+        orgs.newRepoSecret('CODECOV_TOKEN') {
+          value: "pass:bots/iot.thingweb/codecov.io/td-tools-token",
+        },
+      ],
     },
     orgs.newRepo('test-things') {
       allow_merge_commit: true,
