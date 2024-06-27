@@ -2,7 +2,6 @@ local orgs = import 'vendor/otterdog-defaults/otterdog-defaults.libsonnet';
 
 orgs.newOrg('eclipse-thingweb') {
   settings+: {
-    dependabot_security_updates_enabled_for_new_repositories: false,
     description: "Components for making IoT solutions interoperable at scale by leveraging the W3C WoT standards",
     discussion_source_repository: "eclipse-thingweb/thingweb",
     email: "thingweb-dev@eclipse.org",
