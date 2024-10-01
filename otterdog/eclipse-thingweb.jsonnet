@@ -85,6 +85,24 @@ orgs.newOrg('eclipse-thingweb') {
         },
       ],
     },
+    orgs.newRepo('infrastructure') {
+      allow_merge_commit: true,
+      delete_branch_on_merge: false,
+      description: "Main infrastructure configuration of the server to manage the deployment of vserver.",
+      has_discussions: false,
+      homepage: "https://thingweb.io",
+      topics+: [
+        "iot",
+        "organization",
+        "web",
+        "web-of-things",
+        "wot"
+      ],
+      web_commit_signoff_required: false,
+      workflows+: {
+        default_workflow_permissions: "write",
+      },
+    },
     orgs.newRepo('node-red') {
       allow_merge_commit: true,
       allow_update_branch: false,
