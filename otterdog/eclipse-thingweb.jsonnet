@@ -278,7 +278,7 @@ orgs.newOrg('eclipse-thingweb') {
       workflows+: {
        default_workflow_permissions: "write",
       },
-    }
+    },
     orgs.newRepo('website') {
       allow_merge_commit: true,
       allow_update_branch: false,
