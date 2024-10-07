@@ -262,7 +262,7 @@ orgs.newOrg('eclipse-thingweb') {
     orgs.newRepo('wam') {
       allow_merge_commit: true,
       allow_update_branch: false,
-      forked_repository: "https://github.com/UniBO-PRISMLab/wam",
+      forked_repository: "UniBO-PRISMLab/wam",
       fork_default_branch_only: true,
       description: "WoT Application Manager - a command line interface to build a Web of Things applications",
       homepage: "https://thingweb.io",
