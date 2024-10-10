@@ -229,8 +229,6 @@ orgs.newOrg('eclipse-thingweb') {
       delete_branch_on_merge: false,
       dependabot_security_updates_enabled: true,
       description: "A simple vscode extension that adds intellisense support for Thing Descriptor files.",
-      secret_scanning: "disabled",
-      secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
@@ -278,6 +276,7 @@ orgs.newOrg('eclipse-thingweb') {
       allow_update_branch: false,
       forked_repository: "UniBO-PRISMLab/wam",
       fork_default_branch_only: true,
+      default_branch: "master",
       description: "WoT Application Manager - a command line interface to build a Web of Things applications",
       homepage: "https://thingweb.io",
       has_wiki: false,
