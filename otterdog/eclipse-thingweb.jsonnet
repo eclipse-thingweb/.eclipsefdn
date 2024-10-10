@@ -222,6 +222,20 @@ orgs.newOrg('eclipse-thingweb') {
         },
       ],
     },
+    orgs.newRepo('td-code') {
+      allow_merge_commit: true,
+      allow_update_branch: false,
+      default_branch: "master",
+      delete_branch_on_merge: false,
+      dependabot_security_updates_enabled: true,
+      description: "A simple vscode extension that adds intellisense support for Thing Descriptor files.",
+      secret_scanning: "disabled",
+      secret_scanning_push_protection: "disabled",
+      web_commit_signoff_required: false,
+      workflows+: {
+        default_workflow_permissions: "write",
+      },
+    },
     orgs.newRepo('test-things') {
       allow_merge_commit: true,
       allow_update_branch: false,
