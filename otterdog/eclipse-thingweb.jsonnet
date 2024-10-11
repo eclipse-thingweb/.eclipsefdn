@@ -34,8 +34,8 @@ orgs.newOrg('eclipse-thingweb') {
       allow_auto_merge: true,
       allow_merge_commit: true,
       allow_update_branch: false,
-      description: "A W3C Web of Things implementation written in Dart.",
-      homepage: "",
+      description: "Framework to build Web of Things applications in Dart and Flutter.",
+      homepage: "https://thingweb.io",
       topics+: [
         "coap",
         "dart",
@@ -74,6 +74,18 @@ orgs.newOrg('eclipse-thingweb') {
       allow_merge_commit: true,
       allow_update_branch: false,
       delete_branch_on_merge: false,
+      description: "Semantic storage for device metadata based on W3C Thing Description information model",
+      homepage: "https://thingweb.io",
+      topics+: [
+        "iot",
+        "organization",
+        "web",
+        "web-of-things",
+        "wot",
+        "python",
+        "semantic-web",
+        "microservice"
+      ],
       has_wiki: false,
       web_commit_signoff_required: false,
       workflows+: {
@@ -133,7 +145,7 @@ orgs.newOrg('eclipse-thingweb') {
       default_branch: "master",
       delete_branch_on_merge: false,
       dependabot_security_updates_enabled: true,
-      description: "Components for building WoT devices or for interacting with them over various IoT protocols",
+      description: "A fast and extensible framework to connect any device with your browser and backend applications",
       has_wiki: false,
       homepage: "https://thingweb.io",
       topics+: [
@@ -177,7 +189,7 @@ orgs.newOrg('eclipse-thingweb') {
       default_branch: "master",
       delete_branch_on_merge: false,
       dependabot_security_updates_enabled: true,
-      description: "Browser or Node.js based tool for validating and playing with W3C Thing Descriptions",
+      description: "Browser application for validating and designing W3C Thing Descriptions and Thing Models.",
       has_discussions: true,
       has_wiki: false,
       homepage: "https://playground.thingweb.io/",
@@ -202,7 +214,7 @@ orgs.newOrg('eclipse-thingweb') {
       allow_merge_commit: true,
       allow_update_branch: false,
       delete_branch_on_merge: false,
-      description: "Tooling for Thing Descriptions and Thing Models",
+      description: "Utility libraries for W3C Thing Descriptions and Thing Models",
       has_wiki: false,
       homepage: "https://thingweb.io",
       topics+: [
@@ -228,7 +240,7 @@ orgs.newOrg('eclipse-thingweb') {
       default_branch: "master",
       delete_branch_on_merge: false,
       dependabot_security_updates_enabled: true,
-      description: "A simple vscode extension that adds intellisense support for Thing Descriptor files.",
+      description: "VS Code extension for validating and designing W3C Thing Descriptions and Thing Models.", 
       web_commit_signoff_required: false,
       workflows+: {
         default_workflow_permissions: "write",
@@ -277,7 +289,7 @@ orgs.newOrg('eclipse-thingweb') {
       forked_repository: "UniBO-PRISMLab/wam",
       fork_default_branch_only: true,
       default_branch: "master",
-      description: "WoT Application Manager - a command line interface to build a Web of Things applications",
+      description: "WoT Application Manager - a CLI to quickly build a Web of Things application.",
       homepage: "https://thingweb.io",
       has_wiki: false,
       topics+: [
