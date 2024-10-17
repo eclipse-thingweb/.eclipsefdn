@@ -314,6 +314,7 @@ orgs.newOrg('eclipse-thingweb') {
       gh_pages_build_type: "legacy",
       gh_pages_source_branch: "gh-pages",
       gh_pages_source_path: "/",
+      has_discussions: true,
       has_wiki: false,
       homepage: "https://thingweb.io",
       topics+: [
