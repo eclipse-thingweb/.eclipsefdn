@@ -70,6 +70,28 @@ orgs.newOrg('eclipse-thingweb') {
         },
       ],
     },
+    orgs.newRepo('examples') {
+      allow_merge_commit: true,
+      delete_branch_on_merge: false,
+      description: "Example combinations of Thingweb components that have been tested at various events.",
+      has_discussions: false,
+      homepage: "https://thingweb.io",
+      topics+: [
+        "coap",
+        "http",
+        "iot",
+        "organization",
+        "modbus",
+        "mqtt",
+        "web",
+        "web-of-things",
+        "wot"
+      ],
+      web_commit_signoff_required: false,
+      workflows+: {
+        default_workflow_permissions: "write",
+      },
+    },
     orgs.newRepo('domus-tdd-api') {
       allow_merge_commit: true,
       allow_update_branch: false,
