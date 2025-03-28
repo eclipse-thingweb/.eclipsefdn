@@ -12,6 +12,29 @@ orgs.newOrg('iot.thingweb', 'eclipse-thingweb') {
       default_workflow_permissions: "write",
     },
   },
+  secrets+: [        
+    orgs.newOrgSecret('GPG_KEY_ID') {
+      value: "pass:bots/iot.thingweb/gpg/key_id",
+    },
+    orgs.newOrgSecret('GPG_SUBKEY_ID') {
+      value: "pass:bots/iot.thingweb/gpg/subkey_id",
+    },
+    orgs.newOrgSecret('GPG_PASSPHRASE') {
+      value: "pass:bots/iot.thingweb/gpg/passphrase",
+    },
+    orgs.newOrgSecret('GPG_PRIVATE_KEY') {
+      value: "pass:bots/iot.thingweb/gpg/secret-subkeys.asc",
+    },
+    orgs.newOrgSecret('OSSRH_PASSWORD') {
+      value: "pass:bots/iot.thingweb/oss.sonatype.org/gh-token-password",
+    },
+    orgs.newOrgSecret('OSSRH_USERNAME') {
+      value: "pass:bots/iot.thingweb/oss.sonatype.org/gh-token-username",
+    },
+    orgs.newOrgSecret('GITLAB_API_TOKEN') {
+      value: "pass:bots/iot.thingweb/gitlab.eclipse.org/api-token",
+    },
+  ],
   _repositories+:: [
     orgs.newRepo('.github') {
       allow_merge_commit: true,
