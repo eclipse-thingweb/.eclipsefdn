@@ -137,6 +137,32 @@ orgs.newOrg('iot.thingweb', 'eclipse-thingweb') {
         default_workflow_permissions: "write",
       },
     },
+    orgs.newRepo('kotlin-wot') {
+      allow_merge_commit: true,
+      allow_update_branch: false,
+      default_branch: "master",
+      delete_branch_on_merge: false,
+      description: "A Framework for implementing Web of Things in Kotlin",
+      has_wiki: false,
+      homepage: "",
+      topics+: [
+        "ai",
+        "iot",
+        "wot"
+      ],
+      web_commit_signoff_required: false,
+      workflows+: {
+        actions_can_approve_pull_request_reviews: false,
+      },
+      rulesets: [
+        orgs.newRepoRuleset('Main Protection') {
+          allows_creations: true,
+          include_refs+: [
+            "~DEFAULT_BRANCH"
+          ],
+        },
+      ],
+    },
     orgs.newRepo('node-red') {
       allow_merge_commit: true,
       allow_update_branch: false,
