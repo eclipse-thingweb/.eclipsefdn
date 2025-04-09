@@ -177,14 +177,19 @@ orgs.newOrg('iot.thingweb', 'eclipse-thingweb') {
       workflows+: {
         actions_can_approve_pull_request_reviews: false,
       },
-      rulesets: [
-        orgs.newRepoRuleset('Main Protection') {
-          allows_creations: true,
-          include_refs+: [
-            "~DEFAULT_BRANCH"
-          ],
+      secrets: [
+        orgs.newRepoSecret('BOT_TOKEN') {
+          value: "pass:bots/iot.thingweb/github.com/project-token",
         },
       ],
+      branch_protection_rules: [
+        orgs.newBranchProtectionRule('master') {
+          bypass_pull_request_allowances+: [
+            "@RobWin"
+          ],
+          required_approving_review_count: 1,
+        },
+      ]
     },
     orgs.newRepo('node-red') {
       allow_merge_commit: true,
