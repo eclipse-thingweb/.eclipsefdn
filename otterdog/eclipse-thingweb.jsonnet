@@ -359,6 +359,25 @@ orgs.newOrg('iot.thingweb', 'eclipse-thingweb') {
         default_workflow_permissions: "write",
       },
     },
+    orgs.newRepo('ui-wot') {
+      allow_merge_commit: true,
+      delete_branch_on_merge: false,
+      description: "Independent UI components library to build interfaces for IoT applications",
+      has_discussions: false,
+      homepage: "https://thingweb.io",
+      topics+: [
+        "components",
+        "iot",
+        "web",
+        "ui",
+        "web-of-things",
+        "wot"
+      ],
+      web_commit_signoff_required: false,
+      workflows+: {
+        default_workflow_permissions: "write",
+      },
+    },
     orgs.newRepo('wam') {
       allow_merge_commit: true,
       allow_update_branch: false,
