@@ -25,11 +25,11 @@ orgs.newOrg('iot.thingweb', 'eclipse-thingweb') {
     orgs.newOrgSecret('GPG_PRIVATE_KEY') {
       value: "pass:bots/iot.thingweb/gpg/secret-subkeys.asc",
     },
-    orgs.newOrgSecret('OSSRH_PASSWORD') {
-      value: "pass:bots/iot.thingweb/oss.sonatype.org/gh-token-password",
+    orgs.newOrgSecret('CENTRAL_SONATYPE_TOKEN_PASSWORD') {
+      value: "pass:bots/iot.thingweb/central.sonatype.org/token-password",
     },
-    orgs.newOrgSecret('OSSRH_USERNAME') {
-      value: "pass:bots/iot.thingweb/oss.sonatype.org/gh-token-username",
+    orgs.newOrgSecret('CENTRAL_SONATYPE_TOKEN_USERNAME') {
+      value: "pass:bots/iot.thingweb/central.sonatype.org/token-username",
     },
     orgs.newOrgSecret('GITLAB_API_TOKEN') {
       value: "pass:bots/iot.thingweb/gitlab.eclipse.org/api-token",
