@@ -235,20 +235,6 @@ orgs.newOrg('iot.thingweb', 'eclipse-thingweb') {
       workflows+: {
         default_workflow_permissions: "write",
       },
-      webhooks: [
-        orgs.newRepoWebhook('https://notify.travis-ci.org') {
-          events+: [
-            "create",
-            "delete",
-            "issue_comment",
-            "member",
-            "public",
-            "pull_request",
-            "push",
-            "repository"
-          ],
-        },
-      ],
       branch_protection_rules: [
         orgs.newBranchProtectionRule('master') {
           bypass_pull_request_allowances+: [
@@ -441,6 +427,32 @@ orgs.newOrg('iot.thingweb', 'eclipse-thingweb') {
             "master"
           ],
           deployment_branch_policy: "selected",
+        },
+      ],
+    },
+    orgs.newRepo('wotpy') {
+      allow_merge_commit: true,
+      allow_update_branch: false,
+      default_branch: "main",
+      delete_branch_on_merge: false,
+      dependabot_security_updates_enabled: true,
+      description: "A WoT runtime in Python for Thing and Consumer applications",
+      has_wiki: false,
+      homepage: "https://thingweb.io",
+      topics+: [
+        "iot",
+        "python",
+        "web",
+        "web-of-things",
+        "wot"
+      ],
+      web_commit_signoff_required: false,
+      workflows+: {
+        default_workflow_permissions: "write",
+      },
+      branch_protection_rules: [
+        orgs.newBranchProtectionRule('master') {
+          required_approving_review_count: 1,
         },
       ],
     },
