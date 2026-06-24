@@ -10,6 +10,7 @@ orgs.newOrg('iot.thingweb', 'eclipse-thingweb') {
     web_commit_signoff_required: false,
     workflows+: {
       default_workflow_permissions: "write",
+      fork_pr_approval_policy: "first_time_contributors_new_to_github",
     },
   },
   secrets+: [        
