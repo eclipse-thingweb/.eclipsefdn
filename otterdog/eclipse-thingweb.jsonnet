@@ -430,6 +430,73 @@ orgs.newOrg('iot.thingweb', 'eclipse-thingweb') {
         },
       ],
     },
+    orgs.newRepo('wot-py') {
+      allow_merge_commit: true,
+      allow_update_branch: false,
+      default_branch: "develop",
+      delete_branch_on_merge: false,
+      dependabot_security_updates_enabled: true,
+      description: "wotpy is an experimental asynchronous implementation of a W3C Web of Things runtime",
+      gh_pages_build_type: "legacy",
+      gh_pages_source_branch: "gh-pages",
+      gh_pages_source_path: "/",
+      has_projects: false,
+      has_wiki: false,
+      homepage: "",
+      secret_scanning: "disabled",
+      secret_scanning_push_protection: "disabled",
+      topics+: [
+        "asyncio",
+        "iot",
+        "python",
+        "web-of-things",
+        "wot"
+      ],
+      web_commit_signoff_required: false,
+      workflows+: {
+        default_workflow_permissions: "write",
+      },
+      webhooks: [
+        orgs.newRepoWebhook('https://notify.travis-ci.org') {
+          events+: [
+            "create",
+            "delete",
+            "issue_comment",
+            "member",
+            "public",
+            "pull_request",
+            "push",
+            "repository"
+          ],
+        },
+        orgs.newRepoWebhook('https://readthedocs.org/api/v2/webhook/wot-py/105745/') {
+          content_type: "json",
+          events+: [
+            "create",
+            "delete",
+            "pull_request",
+            "push"
+          ],
+          secret: "********",
+        },
+      ],
+      branch_protection_rules: [
+        orgs.newBranchProtectionRule('develop') {
+          required_approving_review_count: 1,
+          required_status_checks+: [
+            "call-python-310-testing / python-testing",
+            "call-python-37-testing / python-testing",
+            "call-python-38-testing / python-testing",
+            "call-python-39-testing / python-testing"
+          ],
+          requires_strict_status_checks: true,
+        },
+      ],
+      environments: [
+        orgs.newEnvironment('github-pages'),
+        orgs.newEnvironment('pypi'),
+      ],
+    },
     orgs.newRepo('wotpy') {
       allow_merge_commit: true,
       allow_update_branch: false,
