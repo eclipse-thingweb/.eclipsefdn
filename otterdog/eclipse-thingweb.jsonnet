@@ -436,13 +436,13 @@ orgs.newOrg('iot.thingweb', 'eclipse-thingweb') {
       default_branch: "develop",
       delete_branch_on_merge: false,
       dependabot_security_updates_enabled: true,
-      description: "wotpy is an experimental asynchronous implementation of a W3C Web of Things runtime",
+      description: "A WoT runtime in Python for Thing and Consumer applications",
       gh_pages_build_type: "legacy",
       gh_pages_source_branch: "gh-pages",
       gh_pages_source_path: "/",
       has_projects: false,
       has_wiki: false,
-      homepage: "",
+      homepage: "https://thingweb.io",
       secret_scanning: "disabled",
       secret_scanning_push_protection: "disabled",
       topics+: [
@@ -484,10 +484,11 @@ orgs.newOrg('iot.thingweb', 'eclipse-thingweb') {
         orgs.newBranchProtectionRule('develop') {
           required_approving_review_count: 1,
           required_status_checks+: [
-            "call-python-310-testing / python-testing",
-            "call-python-37-testing / python-testing",
-            "call-python-38-testing / python-testing",
-            "call-python-39-testing / python-testing"
+            "Run Pytest tests in multiple Python versions / test (3.12)",
+            "Run Pytest tests in multiple Python versions / test (3.11)",
+            "Run Pytest tests in multiple Python versions / test (3.10)",
+            "Run Pytest tests in multiple Python versions / test (3.9)",
+            "Run Pytest tests in multiple Python versions / test (3.8)",
           ],
           requires_strict_status_checks: true,
         },
