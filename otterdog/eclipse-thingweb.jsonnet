@@ -457,18 +457,6 @@ orgs.newOrg('iot.thingweb', 'eclipse-thingweb') {
         default_workflow_permissions: "write",
       },
       webhooks: [
-        orgs.newRepoWebhook('https://notify.travis-ci.org') {
-          events+: [
-            "create",
-            "delete",
-            "issue_comment",
-            "member",
-            "public",
-            "pull_request",
-            "push",
-            "repository"
-          ],
-        },
         orgs.newRepoWebhook('https://readthedocs.org/api/v2/webhook/wot-py/105745/') {
           content_type: "json",
           events+: [
@@ -483,14 +471,6 @@ orgs.newOrg('iot.thingweb', 'eclipse-thingweb') {
       branch_protection_rules: [
         orgs.newBranchProtectionRule('develop') {
           required_approving_review_count: 1,
-          required_status_checks+: [
-            "Run Pytest tests in multiple Python versions / test (3.12)",
-            "Run Pytest tests in multiple Python versions / test (3.11)",
-            "Run Pytest tests in multiple Python versions / test (3.10)",
-            "Run Pytest tests in multiple Python versions / test (3.9)",
-            "Run Pytest tests in multiple Python versions / test (3.8)",
-          ],
-          requires_strict_status_checks: true,
         },
       ],
       environments: [
