@@ -478,7 +478,6 @@ orgs.newOrg('iot.thingweb', 'eclipse-thingweb') {
           required_approving_review_count: 1,
         },
       ],
-      ],
       environments: [
         orgs.newEnvironment('github-pages'),
         orgs.newEnvironment('pypi'),
