@@ -226,11 +226,19 @@ orgs.newOrg('iot.thingweb', 'eclipse-thingweb') {
       has_wiki: false,
       homepage: "https://thingweb.io",
       topics+: [
+        "typescript",
         "iot",
+        "internet-of-things",
         "nodejs",
         "web",
         "web-of-things",
-        "wot"
+        "wot",
+        "http",
+        "modbus",
+        "coap",
+        "digital-twin",
+        "opc-ua",
+        "industrial-iot"
       ],
       web_commit_signoff_required: false,
       workflows+: {
