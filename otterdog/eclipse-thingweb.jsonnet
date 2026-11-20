@@ -487,7 +487,7 @@ orgs.newOrg('iot.thingweb', 'eclipse-thingweb') {
           bypass_force_push_allowances+:[
             "@egekorkan",
             "@Nickgraviton"
-          ]
+          ],
           required_approving_review_count: 1,
         },
       ],
